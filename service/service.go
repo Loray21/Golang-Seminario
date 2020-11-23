@@ -17,16 +17,16 @@ type service struct {
 }
 
 // NewInstance devuelve una instancia del servicio de vuelos
-func NewInstance(db *database.Database) Auto {
+func NewInstance(db *database.Database) Car {
 	return &service{db}
 }
 
-func (s *service) Add(v *model.Auto) *model.Auto {
+func (s *service) Add(v *model.Car) *model.Car {
 	s.db.Add(v)
 	return v
 }
 
-func (s *service) FindByID(ID uint) *model.Auto {
+func (s *service) FindByID(ID uint) *model.Car {
 	return s.db.FindByID(ID)
 }
 

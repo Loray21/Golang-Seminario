@@ -9,10 +9,11 @@ import (
 )
 
 // HTTPController ...
-type HTTPController truct {
+// HTTPController ...
+type HTTPController struct {
 	router  *gin.Engine
-	ervice *service.Car
-
+	service *service.Car
+}
 
 // NewHTTPController ...
 func NewHTTPControler(s *service.Vuelo) HTTPController {
@@ -27,7 +28,7 @@ func (c *HTTPCotroller) Run() {
 
 
 func makeEndpoints(r *gin.Engine, s *servce.Vuelo) {
-	.GET("/vuelos/:id", makeFindHandler(s))
+	.GET("/autos/:id", makeFindHandler(s))
 
 
 func makeFindHandler(s *service.Vuelo) gin.HandlerFun {
@@ -38,7 +39,7 @@ func makeFindHandler(s *service.Vuelo) gin.HandlerFun {
 	v := (*s).FindByID(uint(i))
 
 		c.JSON(http.tatusOK, gin.H{
-			"uelo": v,
+			"Auto": v,
 		)
 	
 }
