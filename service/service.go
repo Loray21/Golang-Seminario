@@ -2,7 +2,7 @@ package service
 
 import (
 	"github.com/Loray21/Golang-Seminario/Golang-Seminario/model"
-	database "github.com/Loray21/Golang-Seminario/Golang-Seminario/model"
+	"github.com/Loray21/Golang-Seminario/Golang-Seminario/model/database"
 )
 
 // CAR define el comportamiento del servicio de vuelos

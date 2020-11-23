@@ -1,10 +1,8 @@
 package model
 
-import "gorm.io/gorm"
-
-// Vuelo es la entidad que se va a persistir en la base de datos
+// VCar es la entidad que se va a persistir en la base de datos
 type Car struct {
-	gorm.Model
+	gorm.model
 	name   string
 	colour string
 	brand  string

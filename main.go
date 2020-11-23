@@ -2,13 +2,10 @@ package main
 
 import (
 	"fmt"
-	"strconv"
-	"time"
 
-	"github.com/Loray21/Golang-Seminario/Golang-Seminario/model"
+	"github.com/Loray21/Golang-Seminario/Golang-Seminario/controller"
 	"github.com/Loray21/Golang-Seminario/Golang-Seminario/model/database"
 	"github.com/Loray21/Golang-Seminario/Golang-Seminario/service"
-	"github.com/jeremiascaballero/ApiGolangMvc/controller"
 )
 
 func main() {
@@ -22,25 +19,25 @@ func main() {
 
 	// ------- ESTO ES A MODO DE EJEMPLO DE COMO USAR EL SERVICIO -----------
 	// genero un vuelo a insertar cuyo nombre es un numero
-	Auto := model.Auto{Name: strconv.Itoa(time.Now().Nanosecond()), Origin: "Ezeiza", Destiny: "Chicago"}
+	Car := Model.Car{name: "hilux", colour: "white", brand: "toyota", price: 200}
 
 	// agrego el vuelo
-	service.Add(&Auto)
+	service.Add(&Car)
 
 	// pongo en la variable vuelo el contenido del punntero que me devuelve la funcion findByID
-	auto = *service.FindByID(vuelo.ID)
+	Car = *service.FindByID(Car.ID)
 	//      ^
 	//      |
 	//      Esto me devuelve el valor que aloja el puntero que me devuelve la
 	//      funcion service.FindByID.
-
-	fmt.Printf("\tID=%v\n", auto.ID)
-	fmt.Printf("\tName=%v\n", auto.Name)
-	fmt.Printf("\tOrigin=%v\n", auto.Origin)
-	fmt.Printf("\tDestiby=%v\n", auto.Destiny)
-	fmt.Printf("\tCreatedAt=%v\n", auto.CreatedAt)
-	fmt.Printf("\tUpdatedAt=%v\n", Auto.UpdatedAt)
-	fmt.Printf("\tDeletedAt=%v\n", auto.DeletedAt)
+	fmt.Printf("\tID=%v\n", Car.ID)
+	fmt.Printf("\tname=%v\n", Car.name)
+	fmt.Printf("\tcolour=%v\n", Car.colour)
+	fmt.Printf("\tbrand=%v\n", Car.brand)
+	fmt.Printf("\tprice=%v\n", Car.price)
+	fmt.Printf("\tCreatedAt=%v\n", Car.CreatedAt)
+	fmt.Printf("\tUpdatedAt=%v\n", Car.UpdatedAt)
+	fmt.Printf("\tDeletedAt=%v\n", Car.DeletedAt)
 	// -------- ACA TERMINA EL EJEMPLO DE COMO USAR EL SERVICIO -------
 
 	// Ahora voy a crear el servicio rest (http)
