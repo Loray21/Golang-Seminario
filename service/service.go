@@ -1,8 +1,8 @@
 package service
 
 import (
-	"github.com/Loray21/Golang-Seminario/Golang-Seminario/model"
-	"github.com/Loray21/Golang-Seminario/Golang-Seminario/model/database"
+	"github.com/Loray21/Golang-Seminario/model"
+	"github.com/Loray21/Golang-Seminario/model/database"
 )
 
 // CAR define el comportamiento del servicio de vuelos
@@ -16,7 +16,7 @@ type service struct {
 	db *database.Database
 }
 
-// NewInstance devuelve una instancia del servicio de vuelos
+// NewInstance devuelve una instancia del servicio CAR
 func NewInstance(db *database.Database) Car {
 	return &service{db}
 }

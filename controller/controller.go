@@ -2,10 +2,9 @@ package controller
 
 import (
 	"net/http"
-
 	"strconv"
 
-	"github.com/Loray21/Golang-Seminario/Golang-Seminario/service"
+	"github.com/Loray21/Golang-Seminario/service"
 	"github.com/gin-gonic/gin"
 )
 

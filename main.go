@@ -3,10 +3,10 @@ package main
 import (
 	"fmt"
 
-	"github.com/Loray21/Golang-Seminario/Golang-Seminario/controller"
-	"github.com/Loray21/Golang-Seminario/Golang-Seminario/model"
-	"github.com/Loray21/Golang-Seminario/Golang-Seminario/model/database"
-	"github.com/Loray21/Golang-Seminario/Golang-Seminario/service"
+	"github.com/Loray21/Golang-Seminario/controller"
+	"github.com/Loray21/Golang-Seminario/model"
+	"github.com/Loray21/Golang-Seminario/model/database"
+	"github.com/Loray21/Golang-Seminario/service"
 )
 
 func main() {

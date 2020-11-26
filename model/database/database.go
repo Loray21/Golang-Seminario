@@ -1,7 +1,7 @@
 package database
 
 import (
-	"github.com/Loray21/Golang-Seminario/Golang-Seminario/model"
+	"github.com/Loray21/Golang-Seminario/model"
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
 )
@@ -24,9 +24,9 @@ func NewDatabase(dsn string) *Database { //dsn := "user:pass@tcp(127.0.0.1:3306)
 
 // FindAll devuelve todos los vuelos registrados
 func (database *Database) FindAll() []model.Car {
-	var vuelos []model.Car
-	database.db.Find(&vuelos)
-	return vuelos
+	var autos []model.Car
+	database.db.Find(&autos)
+	return autos
 }
 
 // CreateSchema create el esquema a partir de las entidades.
