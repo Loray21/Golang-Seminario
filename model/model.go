@@ -1,10 +1,13 @@
 package model
 
-// VCar es la entidad que se va a persistir en la base de datos
+import "gorm.io/gorm"
+
+/* VCar es la entidad que se va a persistir en la base de datos*/
+
 type Car struct {
-	gorm.model
-	name   string
-	colour string
-	brand  string
-	price  int
+	gorm.Model
+	Name   string
+	Colour string
+	Brand  string
+	Price  int
 }

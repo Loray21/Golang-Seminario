@@ -12,7 +12,7 @@ import (
 // HTTPController ...
 type HTTPController struct {
 	router  *gin.Engine
-	service *service.Vuelo
+	service *service.Car
 }
 
 // NewHTTPController ...
