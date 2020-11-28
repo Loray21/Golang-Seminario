@@ -1,4 +1,4 @@
-API RESTO GOLANG
+API REST GOLANG
 realizamos un servicio rest + persistencia en SQLlite
 Construido con 🛠️
 -go1.15.5
