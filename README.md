@@ -1,7 +1,7 @@
-#API REST GOLANG
+# API RESTO GOLANG
 realizamos un servicio rest + persistencia en SQLlite
-Construido con 🛠️
+# Construido con 🛠️
 -go1.15.5
 -sqlite 3 (bdd)
-Autores ✒️
+# Autores ✒️
 -Tomas Loray(Seminario tudai)
