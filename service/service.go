@@ -5,7 +5,7 @@ import (
 	"github.com/Loray21/Golang-Seminario/model/database"
 )
 
-// CAR define el comportamiento del servicio de vuelos
+// CAR define el comportamiento del servicIO
 type Car interface {
 	Add(*model.Car) *model.Car
 	FindByID(ID uint) *model.Car

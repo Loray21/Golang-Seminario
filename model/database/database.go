@@ -22,7 +22,7 @@ func NewDatabase(dsn string) *Database { //dsn := "user:pass@tcp(127.0.0.1:3306)
 	return &Database{db}
 }
 
-// FindAll devuelve todos los vuelos registrados
+// FindAll devuelve todo
 func (database *Database) FindAll() []model.Car {
 	var autos []model.Car
 	database.db.Find(&autos)
@@ -34,7 +34,12 @@ func (database *Database) CreateSchema() {
 	database.db.AutoMigrate(&model.Car{})
 }
 
-// Add inserta un vuelo
+func (database *Database) Remove(i uint) {
+	var v model.Car
+	database.db.Unscoped().Delete(&v, i)
+}
+
+// Add inserta un auto
 func (database *Database) Add(v *model.Car) {
 	database.db.Create(v)
 }
